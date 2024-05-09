@@ -1,19 +1,27 @@
 class Exe {
-  static int a=10;
-  static int b=0;
-  static void err() throws Exception{
-    System.out.println("inside throws");
-      a=a/b;
-      throw new Exception("demo");
+  static int age;
+  @SuppressWarnings("static-access")
+  Exe(int a){
+    this.age= a;
+  }
+  static void msg() throws CreateException{
+     if(age<18){
+      throw new CreateException("age is under 18");
+     }
+    else{
+      System.out.println("allowed ");
+    }
   }
 }
 public class ExceptionHandling {
   public static void main(String[] args){
+  @SuppressWarnings("unused")
+  Exe n = new Exe(17);
   try {
-    Exe.err(); 
-  }catch (Exception e){ 
-    System.out.println("cought again and again");
-    System.out.println(e);
+    Exe.msg();
+  }catch(CreateException e){
+   System.out.println(" alert age in less then 18");
+   System.out.println(e);
   }
 }
 }
