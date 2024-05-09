@@ -30,6 +30,7 @@ class Str{
        System.out.println("not same string");
       }
       }
+      System.out.println( "trim "+str1.trim() + str2.trim());
    }
    void print(){
       System.out.println("printing.....");
