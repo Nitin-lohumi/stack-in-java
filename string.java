@@ -8,7 +8,6 @@ public class string {
    n.print();
    }
 }
-
 class Str{
    String str1;
    String str2;

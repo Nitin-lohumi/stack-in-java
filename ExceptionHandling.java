@@ -26,7 +26,6 @@ public class ExceptionHandling {
   try {
     Exe.msg();
   }catch(CreateException e){
-   System.out.println(" alert age in less then 18");
    System.out.println(e);
   }
 }
