@@ -9,7 +9,7 @@ class C extends A{
     C(int a){
         super(a);
     }
-   public void show(){
+    public void show(){
         System.out.println("this is abstarct method" +a);
     }
 }

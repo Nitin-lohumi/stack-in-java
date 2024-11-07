@@ -3,14 +3,13 @@ class Exe {
   @SuppressWarnings("static-access")
   Exe(int a){
     this.age= a;
-  }
+  } 
   static void msg() throws CreateException{
      if(age<18){
       try{
         throw new CreateException("age is under 18");
       }
       catch(CreateException e){
-        System.out.println("exception occoured");
         throw e;
       }
      }
