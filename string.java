@@ -1,12 +1,15 @@
-import java.lang.reflect.Array;
+import java.util.Scanner;
 
 public class string {
    public static void main(String[] args) {
    //  String s = new String("heelo my name is nitin");
    //  String s1 = new String("heelo my name is nitin");
-   Str n = new Str("abcdef");
+   Scanner sc = new Scanner(System.in);
+   String s = sc.nextLine();
+   Str n = new Str(s);
    // n.m();
-   n.reverse1();
+   n.reverse();
+   sc.close();
    }
 }
 class Str{
@@ -21,24 +24,26 @@ class Str{
          arr[last] = temp;
    }
    public void reverse(){
-      char[] arr = str1.toCharArray();
-      int i=0;
-      int j = arr.length-1;
-       while(i<j) {
-         swap(arr,i,j);
-         i++;
-         j--;
+      int index = str1.length()-1;
+      String rev = "";
+      while(index>=0){
+        rev = rev + str1.charAt(index);
+        index--;
       }
-      System.out.println(new String(arr));
+      System.out.println("your rev is "+ rev);
    }
    public void reverse1(){
-      char str; String nstr="";
-      System.out.println(str1.length());
-     for (int j=0; j<str1.length(); j++) {
-        str = str1.charAt(j);
-        nstr=str+nstr;
-     }
-      System.out.println(nstr);
+      char[] ch = str1.toCharArray();
+      int i=0;
+      int j=ch.length-1;
+       while(i<j){
+         char temp = ch[i];//n
+         ch[i] = ch[j];//n
+         ch[j] = temp;
+         i++;
+         j--;
+       }
+      System.out.println(new String(ch));
    }
 
 }
